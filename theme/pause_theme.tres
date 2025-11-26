@@ -1,9 +1,9 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://dw6f6r52hddos"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://dw6f6r52hddos"]
 
-[ext_resource type="FontFile" uid="uid://cl2nuey2qdng0" path="res://brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="1_68vhm"]
-[ext_resource type="Texture2D" uid="uid://b143t0ctsc8ko" path="res://brackeys_platformer_assets/ui/button_hover.png" id="1_c57sh"]
-[ext_resource type="Texture2D" uid="uid://b2v5swrjgkw12" path="res://brackeys_platformer_assets/ui/button_normal.png" id="2_7r1bl"]
-[ext_resource type="Texture2D" uid="uid://xnrjp80pfrdg" path="res://brackeys_platformer_assets/ui/button_pressed.png" id="3_vlv6o"]
+[ext_resource type="FontFile" uid="uid://cl2nuey2qdng0" path="res://assets/fonts/PixelOperator8.ttf" id="1_68vhm"]
+[ext_resource type="Texture2D" uid="uid://b143t0ctsc8ko" path="res://assets/ui/button_hover.png" id="1_c57sh"]
+[ext_resource type="Texture2D" uid="uid://b2v5swrjgkw12" path="res://assets/ui/button_normal.png" id="2_7r1bl"]
+[ext_resource type="Texture2D" uid="uid://xnrjp80pfrdg" path="res://assets/ui/button_pressed.png" id="3_vlv6o"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c57sh"]
 
@@ -28,6 +28,12 @@ texture_margin_top = 4.0
 texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlv6o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gggax"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uk3rl"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twduv"]
 bg_color = Color(0, 0, 0, 0.5019608)
 
@@ -39,4 +45,9 @@ Button/styles/focus = SubResource("StyleBoxEmpty_c57sh")
 Button/styles/hover = SubResource("StyleBoxTexture_gggax")
 Button/styles/normal = SubResource("StyleBoxTexture_uk3rl")
 Button/styles/pressed = SubResource("StyleBoxTexture_dr3wh")
+CheckBox/font_sizes/font_size = 12
+CheckBox/styles/hover = SubResource("StyleBoxEmpty_vlv6o")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_gggax")
+CheckBox/styles/pressed = SubResource("StyleBoxEmpty_uk3rl")
+Label/font_sizes/font_size = 12
 Panel/styles/panel = SubResource("StyleBoxFlat_twduv")

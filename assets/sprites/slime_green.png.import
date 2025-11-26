@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciuym45i75er4"
-path="res://.godot/imported/pause_hover.png-1fdc7856a116fa12cce5c4efb3c6800d.ctex"
+uid="uid://c67d36kj1g1ly"
+path="res://.godot/imported/slime_green.png-f6349164bf3a0f5189bb927b97af9c58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://brackeys_platformer_assets/ui/pause_hover.png"
-dest_files=["res://.godot/imported/pause_hover.png-1fdc7856a116fa12cce5c4efb3c6800d.ctex"]
+source_file="res://assets/sprites/slime_green.png"
+dest_files=["res://.godot/imported/slime_green.png-f6349164bf3a0f5189bb927b97af9c58.ctex"]
 
 [params]
 

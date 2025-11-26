@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://lkbppka6ljxi"]
 
-[ext_resource type="Script" uid="uid://cmo1gekv1p6qq" path="res://brackeys_platformer_assets/sprites/kill_zone.gd" id="1_r3lb6"]
+[ext_resource type="Script" uid="uid://cmo1gekv1p6qq" path="res://assets/sprites/kill_zone.gd" id="1_r3lb6"]
 
 [node name="KillZone" type="Area2D"]
 collision_mask = 2

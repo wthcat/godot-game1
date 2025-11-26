@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2v5swrjgkw12"
-path="res://.godot/imported/button_normal.png-0c886fc8102d29e5572805f5096686e3.ctex"
+uid="uid://ubks72i38alp"
+path="res://.godot/imported/pause_pressed.png-b0292f15bee1b82c5ba8a81e5141a119.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://brackeys_platformer_assets/ui/button_normal.png"
-dest_files=["res://.godot/imported/button_normal.png-0c886fc8102d29e5572805f5096686e3.ctex"]
+source_file="res://assets/ui/pause_pressed.png"
+dest_files=["res://.godot/imported/pause_pressed.png-b0292f15bee1b82c5ba8a81e5141a119.ctex"]
 
 [params]
 

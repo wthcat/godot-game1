@@ -1,8 +1,8 @@
 [gd_scene load_steps=43 format=3 uid="uid://dbu85fp0h3bvw"]
 
 [ext_resource type="Script" uid="uid://dyja7erjhs75o" path="res://scripts/player.gd" id="1_1kbk7"]
-[ext_resource type="Texture2D" uid="uid://bjxfna13ohr4e" path="res://brackeys_platformer_assets/sprites/knight.png" id="1_cyojo"]
-[ext_resource type="AudioStream" uid="uid://b1ydjrlinhglo" path="res://brackeys_platformer_assets/sounds/jump.wav" id="3_gqjuk"]
+[ext_resource type="Texture2D" uid="uid://bjxfna13ohr4e" path="res://assets/sprites/knight.png" id="1_cyojo"]
+[ext_resource type="AudioStream" uid="uid://b1ydjrlinhglo" path="res://assets/sounds/jump.wav" id="3_gqjuk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kbk7"]
 atlas = ExtResource("1_cyojo")

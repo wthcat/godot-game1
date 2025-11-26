@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://btqak57yg1it"]
 
-[ext_resource type="AudioStream" uid="uid://b7pmv7y7rs67q" path="res://brackeys_platformer_assets/music/time_for_adventure.mp3" id="1_dwevq"]
+[ext_resource type="AudioStream" uid="uid://b7pmv7y7rs67q" path="res://assets/music/time_for_adventure.mp3" id="1_dwevq"]
 
 [node name="BGM" type="AudioStreamPlayer"]
 stream = ExtResource("1_dwevq")

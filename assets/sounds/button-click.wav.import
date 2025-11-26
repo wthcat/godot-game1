@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://o5abnhx71f75"
-path="res://.godot/imported/button-click.wav-f43aaf34c5070fc910b11aca12849a41.sample"
+path="res://.godot/imported/button-click.wav-beead611594703fe672b47aec9e21783.sample"
 
 [deps]
 
-source_file="res://brackeys_platformer_assets/sounds/button-click.wav"
-dest_files=["res://.godot/imported/button-click.wav-f43aaf34c5070fc910b11aca12849a41.sample"]
+source_file="res://assets/sounds/button-click.wav"
+dest_files=["res://.godot/imported/button-click.wav-beead611594703fe672b47aec9e21783.sample"]
 
 [params]
 

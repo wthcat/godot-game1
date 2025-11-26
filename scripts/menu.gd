@@ -14,7 +14,6 @@ func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Game/Level/game.tscn")
 	print("Enter the play.")
 
-
 func _on_options_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Game/index/optionsMenu.tscn")
 	print("Enter the options.")

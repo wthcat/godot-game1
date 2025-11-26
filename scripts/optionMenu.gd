@@ -17,6 +17,11 @@ func _ready() -> void:
 	sfx_vol_slider.value = min(audio_settings.sfx_volume, 1.0)
 
 # 返回设置
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.keycode == KEY_ESCAPE and event.pressed:
+			_on_back_pressed()
+
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Game/index/mainMenu.tscn")
 # Called when the node enters the scene tree for the first time.
