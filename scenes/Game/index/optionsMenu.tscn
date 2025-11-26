@@ -5,23 +5,28 @@
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 787.0
-offset_top = 448.0
-offset_right = 827.0
-offset_bottom = 488.0
-scale = Vector2(4, 4)
+offset_right = 482.0
+offset_bottom = 276.0
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_k0bo8")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = -25.0
-offset_top = -90.0
-offset_right = 125.0
-offset_bottom = 160.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -113.0
+offset_right = 75.0
+offset_bottom = 137.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 4
 
 [node name="Fullscreen_checkbox" type="CheckBox" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
@@ -93,11 +98,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Back" type="Button" parent="."]
-layout_mode = 0
-offset_left = -170.25
-offset_top = -88.0
-offset_right = -96.5
-offset_bottom = -57.0
+layout_mode = 1
+offset_right = 73.75
+offset_bottom = 31.0
 text = "back"
 
 [connection signal="toggled" from="MarginContainer/VBoxContainer/Fullscreen_checkbox" to="." method="_on_full_screen_toggled"]

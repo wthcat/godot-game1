@@ -1,14 +1,15 @@
-[gd_scene load_steps=18 format=4 uid="uid://cjyeqouex4m7i"]
+[gd_scene load_steps=19 format=4 uid="uid://cjyeqouex4m7i"]
 
-[ext_resource type="PackedScene" uid="uid://dbu85fp0h3bvw" path="res://scenes/Player/player.tscn" id="1_0i15y"]
-[ext_resource type="Script" uid="uid://csiint60e5ryn" path="res://scripts/game_manager.gd" id="1_1p5ji"]
-[ext_resource type="PackedScene" uid="uid://s7arr4av182v" path="res://scenes/Game/platform.tscn" id="2_fc1p2"]
-[ext_resource type="Texture2D" uid="uid://byygumdhj58wg" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="2_jm17p"]
-[ext_resource type="PackedScene" uid="uid://w5tdn78likuv" path="res://scenes/Game/coin.tscn" id="4_bfxw3"]
-[ext_resource type="PackedScene" uid="uid://lkbppka6ljxi" path="res://scenes/Game/kill_zone.tscn" id="5_7dfdq"]
-[ext_resource type="PackedScene" uid="uid://bkj6f1xibjyci" path="res://scenes/Game/slime.tscn" id="6_54y65"]
-[ext_resource type="FontFile" uid="uid://cl2nuey2qdng0" path="res://brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="7_t5wam"]
-[ext_resource type="FontFile" uid="uid://bwmn31as0ida4" path="res://brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="9_rwo3j"]
+[ext_resource type="Script" uid="uid://csiint60e5ryn" path="res://scripts/game_manager.gd" id="1_xq6ke"]
+[ext_resource type="FontFile" uid="uid://bwmn31as0ida4" path="res://brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_aw7lm"]
+[ext_resource type="PackedScene" uid="uid://dbu85fp0h3bvw" path="res://scenes/Player/player.tscn" id="3_e0r6f"]
+[ext_resource type="PackedScene" uid="uid://lkbppka6ljxi" path="res://scenes/Game/kill_zone.tscn" id="4_b2vnj"]
+[ext_resource type="PackedScene" uid="uid://w5tdn78likuv" path="res://scenes/Game/coin.tscn" id="5_2u7cx"]
+[ext_resource type="PackedScene" uid="uid://s7arr4av182v" path="res://scenes/Game/platform.tscn" id="6_0aooh"]
+[ext_resource type="Texture2D" uid="uid://byygumdhj58wg" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="7_h4rp4"]
+[ext_resource type="PackedScene" uid="uid://bkj6f1xibjyci" path="res://scenes/Game/slime.tscn" id="8_8a20g"]
+[ext_resource type="FontFile" uid="uid://cl2nuey2qdng0" path="res://brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="9_678bj"]
+[ext_resource type="PackedScene" uid="uid://dvnl4srbljfp" path="res://scenes/Game/UI/Pause.tscn" id="10_aw7lm"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_54y65"]
 
@@ -51,7 +52,7 @@ _data = {
 }
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fc1p2"]
-texture = ExtResource("2_jm17p")
+texture = ExtResource("7_h4rp4")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -254,7 +255,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fc1p2")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7dfdq"]
-texture = ExtResource("2_jm17p")
+texture = ExtResource("7_h4rp4")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -423,30 +424,30 @@ sources/0 = SubResource("TileSetAtlasSource_7dfdq")
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("1_1p5ji")
+script = ExtResource("1_xq6ke")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
 offset_left = 523.0
 offset_top = -76.0
 offset_right = 623.0
 offset_bottom = -57.0
-theme_override_fonts/font = ExtResource("9_rwo3j")
+theme_override_fonts/font = ExtResource("2_aw7lm")
 theme_override_font_sizes/font_size = 8
 text = "You collected X coins!"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Player" parent="." instance=ExtResource("1_0i15y")]
+[node name="Player" parent="." instance=ExtResource("3_e0r6f")]
 z_index = 5
 position = Vector2(-128, 12)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, 4)
-zoom = Vector2(4, 4)
+zoom = Vector2(0.5, 0.5)
 limit_bottom = 125
 position_smoothing_enabled = true
 
-[node name="KillZone" parent="." instance=ExtResource("5_7dfdq")]
+[node name="KillZone" parent="." instance=ExtResource("4_b2vnj")]
 position = Vector2(-128, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
@@ -455,30 +456,30 @@ shape = SubResource("WorldBoundaryShape2D_54y65")
 
 [node name="Coins" type="Node" parent="."]
 
-[node name="Coin" parent="Coins" instance=ExtResource("4_bfxw3")]
+[node name="Coin" parent="Coins" instance=ExtResource("5_2u7cx")]
 position = Vector2(33, 40)
 
-[node name="Coin3" parent="Coins" instance=ExtResource("4_bfxw3")]
+[node name="Coin3" parent="Coins" instance=ExtResource("5_2u7cx")]
 position = Vector2(281, 53)
 
-[node name="Coin2" parent="Coins" instance=ExtResource("4_bfxw3")]
+[node name="Coin2" parent="Coins" instance=ExtResource("5_2u7cx")]
 position = Vector2(136, 40)
 
-[node name="Coin4" parent="Coins" instance=ExtResource("4_bfxw3")]
+[node name="Coin4" parent="Coins" instance=ExtResource("5_2u7cx")]
 position = Vector2(145, -72)
 
-[node name="Coin5" parent="Coins" instance=ExtResource("4_bfxw3")]
+[node name="Coin5" parent="Coins" instance=ExtResource("5_2u7cx")]
 position = Vector2(456, 25)
 
 [node name="Platforms" type="Node" parent="."]
 
-[node name="Platform" parent="Platforms" instance=ExtResource("2_fc1p2")]
+[node name="Platform" parent="Platforms" instance=ExtResource("6_0aooh")]
 position = Vector2(-85, 1)
 
-[node name="Platform3" parent="Platforms" instance=ExtResource("2_fc1p2")]
+[node name="Platform3" parent="Platforms" instance=ExtResource("6_0aooh")]
 position = Vector2(-41, -29)
 
-[node name="Platform2" parent="Platforms" instance=ExtResource("2_fc1p2")]
+[node name="Platform2" parent="Platforms" instance=ExtResource("6_0aooh")]
 position = Vector2(291, 53)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
@@ -501,7 +502,7 @@ tile_map_data = PackedByteArray("AADz/wQAAAAAAAwAAAD0/wQAAAAAAAwAAAD1/wQAAAAAAAw
 tile_set = SubResource("TileSet_54y65")
 metadata/_edit_lock_ = true
 
-[node name="Slime" parent="." instance=ExtResource("6_54y65")]
+[node name="Slime" parent="." instance=ExtResource("8_8a20g")]
 position = Vector2(411, 48)
 
 [node name="Labels" type="Node" parent="."]
@@ -511,7 +512,7 @@ offset_left = -252.0
 offset_top = -48.0
 offset_right = -156.0
 offset_bottom = -36.0
-theme_override_fonts/font = ExtResource("7_t5wam")
+theme_override_fonts/font = ExtResource("9_678bj")
 theme_override_font_sizes/font_size = 8
 text = "Space to jump"
 
@@ -520,20 +521,8 @@ offset_left = -254.0
 offset_top = -31.0
 offset_right = -158.0
 offset_bottom = -19.0
-theme_override_fonts/font = ExtResource("7_t5wam")
+theme_override_fonts/font = ExtResource("9_678bj")
 theme_override_font_sizes/font_size = 8
 text = "Use A/D to move"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Button" type="Button" parent="CanvasLayer"]
-custom_minimum_size = Vector2(60, 20)
-offset_left = 50.0
-offset_top = 54.0
-offset_right = 330.0
-offset_bottom = 194.0
-theme_override_fonts/font = ExtResource("7_t5wam")
-theme_override_font_sizes/font_size = 60
-text = "back"
-
-[connection signal="pressed" from="CanvasLayer/Button" to="GameManager" method="_on_button_pressed"]
+[node name="Pause" parent="." instance=ExtResource("10_aw7lm")]

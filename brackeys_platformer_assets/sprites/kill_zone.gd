@@ -22,6 +22,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	Engine.time_scale = 1
+	print("Reload the level.")
 	get_tree().reload_current_scene()
 	
 	pass # Replace with function body.
