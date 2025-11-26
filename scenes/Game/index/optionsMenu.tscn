@@ -1,0 +1,110 @@
+[gd_scene load_steps=2 format=3 uid="uid://oev7he43flmr"]
+
+[ext_resource type="Script" uid="uid://d0jykaiokfcpp" path="res://scripts/optionMenu.gd" id="1_k0bo8"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 787.0
+offset_top = 448.0
+offset_right = 827.0
+offset_bottom = 488.0
+scale = Vector2(4, 4)
+script = ExtResource("1_k0bo8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = -25.0
+offset_top = -90.0
+offset_right = 125.0
+offset_bottom = 160.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Fullscreen_checkbox" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Full Screen"
+
+[node name="Master_Vol_Slider" type="HSlider" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Master_Vol" type="Label" parent="MarginContainer/VBoxContainer/Master_Vol_Slider"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = -10.0
+offset_right = 51.0
+offset_bottom = 30.0
+grow_horizontal = 2
+text = "Main Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Music_Vol_Slider" type="HSlider" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Music_Vol" type="Label" parent="MarginContainer/VBoxContainer/Music_Vol_Slider"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = -10.0
+offset_right = 58.0
+offset_bottom = 30.0
+grow_horizontal = 2
+text = "Music Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFX_Vol_Slider" type="HSlider" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SFX_Vol" type="Label" parent="MarginContainer/VBoxContainer/SFX_Vol_Slider"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = -10.0
+offset_right = 49.0
+offset_bottom = 30.0
+grow_horizontal = 2
+text = "SFX volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = -170.25
+offset_top = -88.0
+offset_right = -96.5
+offset_bottom = -57.0
+text = "back"
+
+[connection signal="toggled" from="MarginContainer/VBoxContainer/Fullscreen_checkbox" to="." method="_on_full_screen_toggled"]
+[connection signal="drag_ended" from="MarginContainer/VBoxContainer/Master_Vol_Slider" to="." method="_on_main_vol_slider_drag_ended"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Master_Vol_Slider" to="." method="_on_main_vol_slider_value_changed"]
+[connection signal="drag_ended" from="MarginContainer/VBoxContainer/Music_Vol_Slider" to="." method="_on_music_vol_slider_drag_ended"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Music_Vol_Slider" to="." method="_on_music_vol_slider_value_changed"]
+[connection signal="drag_ended" from="MarginContainer/VBoxContainer/SFX_Vol_Slider" to="." method="_on_sfx_vol_slider_drag_ended"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/SFX_Vol_Slider" to="." method="_on_sfx_vol_slider_value_changed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
