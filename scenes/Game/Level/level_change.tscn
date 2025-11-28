@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddw2csek5jx4s"]
+
+[ext_resource type="PackedScene" uid="uid://delvd8mn03nsr" path="res://scenes/Game/Level/level_page.tscn" id="1_jt4nb"]
+
+[node name="Level_change" type="Control"]
+clip_contents = true
+custom_minimum_size = Vector2(216, 88)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 216.0
+offset_bottom = 88.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 416.0
+offset_bottom = 56.0
+
+[node name="LevelPage" parent="HBoxContainer" instance=ExtResource("1_jt4nb")]
+layout_mode = 2
+
+[node name="LevelPage2" parent="HBoxContainer" instance=ExtResource("1_jt4nb")]
+layout_mode = 2
+
+[node name="LevelPage3" parent="HBoxContainer" instance=ExtResource("1_jt4nb")]
+layout_mode = 2

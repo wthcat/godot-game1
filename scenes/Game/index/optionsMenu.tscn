@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://oev7he43flmr"]
 
-[ext_resource type="Theme" uid="uid://dw6f6r52hddos" path="res://theme/pause_theme.tres" id="1_e4h2y"]
+[ext_resource type="Theme" uid="uid://dw6f6r52hddos" path="res://theme/ui_theme.tres" id="1_e4h2y"]
 [ext_resource type="Script" uid="uid://d0jykaiokfcpp" path="res://scripts/optionMenu.gd" id="1_k0bo8"]
 
 [node name="OptionsMenu" type="Control"]
@@ -104,9 +104,20 @@ vertical_alignment = 1
 layout_mode = 1
 offset_left = 20.0
 offset_top = 14.0
-offset_right = 93.75
-offset_bottom = 45.0
+offset_right = 85.0
+offset_bottom = 44.0
 text = "back"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.14509805, 0.16862746, 0.20392157, 1)
 
 [connection signal="toggled" from="MarginContainer/VBoxContainer/Fullscreen_checkbox" to="." method="_on_full_screen_toggled"]
 [connection signal="drag_ended" from="MarginContainer/VBoxContainer/Master_Vol_Slider" to="." method="_on_main_vol_slider_drag_ended"]

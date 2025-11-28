@@ -11,7 +11,8 @@ func _ready() -> void:
 	print("Load config successfully.")
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Game/Level/game.tscn")
+	# get_tree().change_scene_to_file("res://scenes/Game/UI/level_select.tscn")
+	get_tree().change_scene_to_file("res://scenes/Game/UI/level_select.tscn")
 	print("Enter the play.")
 
 func _on_options_pressed() -> void:

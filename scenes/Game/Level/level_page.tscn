@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://delvd8mn03nsr"]
+
+[ext_resource type="PackedScene" uid="uid://8os1egpx1835" path="res://scenes/Game/Level/level_card.tscn" id="1_k43x5"]
+
+[node name="LevelPage" type="GridContainer"]
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 186.0
+offset_bottom = 96.0
+columns = 5
+
+[node name="LevelCard" parent="." instance=ExtResource("1_k43x5")]
+layout_mode = 2
+
+[node name="LevelCard2" parent="." instance=ExtResource("1_k43x5")]
+layout_mode = 2
+
+[node name="LevelCard3" parent="." instance=ExtResource("1_k43x5")]
+layout_mode = 2
+
+[node name="LevelCard4" parent="." instance=ExtResource("1_k43x5")]
+layout_mode = 2
+
+[node name="LevelCard5" parent="." instance=ExtResource("1_k43x5")]
+layout_mode = 2
+
+[node name="LevelCard6" parent="." instance=ExtResource("1_k43x5")]
+layout_mode = 2
+
+[node name="LevelCard7" parent="." instance=ExtResource("1_k43x5")]
+layout_mode = 2
+
+[node name="LevelCard8" parent="." instance=ExtResource("1_k43x5")]
+layout_mode = 2
+
+[node name="LevelCard9" parent="." instance=ExtResource("1_k43x5")]
+layout_mode = 2
+
+[node name="LevelCard10" parent="." instance=ExtResource("1_k43x5")]
+layout_mode = 2

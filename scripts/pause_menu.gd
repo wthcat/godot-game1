@@ -24,5 +24,5 @@ func unpause():
 	
 func quit_game():
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scenes/Game/index/mainMenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/Game/UI/level_select.tscn")
 	

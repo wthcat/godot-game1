@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4hc2u41q5wl0"]
+
+[ext_resource type="Theme" uid="uid://dw6f6r52hddos" path="res://theme/ui_theme.tres" id="1_r30mq"]
+[ext_resource type="PackedScene" uid="uid://delvd8mn03nsr" path="res://scenes/Game/Level/level_page.tscn" id="2_r30mq"]
+[ext_resource type="Script" uid="uid://0ttw18jovxti" path="res://scripts/level_page_move.gd" id="2_v5yc2"]
+
+[node name="LevelSelect" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_r30mq")
+script = ExtResource("2_v5yc2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14509805, 0.16862746, 0.20392157, 1)
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 6.0
+offset_right = 48.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 8
+text = "back"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 17.0
+offset_right = 213.0
+offset_bottom = 33.0
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Level select"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelPage" parent="." instance=ExtResource("2_r30mq")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -108.0
+offset_top = -95.0
+offset_right = 108.0
+offset_bottom = -6.9999847
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
